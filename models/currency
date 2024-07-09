@@ -1,0 +1,1 @@
+models.CharField(max_length=50)  # Local currency used in the region.
