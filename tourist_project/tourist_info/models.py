@@ -11,7 +11,5 @@ class TouristInfo(models.Model):
     email=models.EmailField()
     website=models.URLField()
 
-
-
     def __str__(self):
         return self.region_name
