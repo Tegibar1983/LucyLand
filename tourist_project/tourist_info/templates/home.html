@@ -1,8 +1,8 @@
 {% extends 'base.html'%}
 
-{%for region in all_regions%}
+{%block content%}
 
-<h1> {{region.region_name}} </h1>
+
 <h1> {{region.region_number}} </h1>
 <h1> {{region.capital_city}} </h1>
 <h1> {{region.telephone}} </h1>
@@ -10,5 +10,33 @@
 <h1> {{region.website}} </h1>
 
 
-{%endfor%}
+<!--Table-->
+<div class="container">
+    <table class="table table-bordered border-primary">
+      <thead class="table-dark">
+        <tr>
+          <th scope="col">Region Number</th>
+          <th scope="col">Region Name</th>
+          <th scope="col">Operation on Region</th>
+        </tr>
+      </thead>
+
+      
+      <tbody>
+        {%for region in all_regions%}
+        <tr>
+          <td>{{region.region_number}}</td>
+          <td>{{region.region_name}}</td>
+          <td>CRUD</td>
+        </tr>
+       
+        {%endfor%}
+
+      </tbody>
+    </table>
+  </div>
+{%endblock content%}
+
+
+
 

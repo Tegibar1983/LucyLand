@@ -23,3 +23,10 @@ def create_region(request):
         form=TouristInfoForm()
         context={'form':form}
         return render(request, 'create_region.html', context=context)
+    
+
+
+def read_more(request, pk):
+    region=TouristInfo.objects.get(id=pk)
+    context={'region':region}
+    return render(request, 'read_more.html', context=context)

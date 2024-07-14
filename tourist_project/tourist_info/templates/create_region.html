@@ -1,14 +1,17 @@
 {% extends 'base.html'%}
 
-{%block title%}
+{% block title %}
 Create Region
-{%endblock title%}
+{% endblock title %}
 
-{%block content%}
+{% block content %}
 
+<div class='bg-blue border border- border-5 shadowed-form m-3 p-3'>   
 <form method="POST", enctype="multipart/form-data">
+    {% csrf_token %}
     {{form.as_p}}
-    <input type="submit" value="Create Region">
+    <input type="submit" class="btn btn-primary" value="Create">
 </form>
+</div>
 
-{%endblock content%}
+{% endblock content%}
