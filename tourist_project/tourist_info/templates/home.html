@@ -27,7 +27,11 @@
         <tr>
           <td>{{region.region_number}}</td>
           <td>{{region.region_name}}</td>
-          <td>CRUD</td>
+          <td><a href="{%url 'read_more' region.id%}">Readmore</a>
+              <a href="{%url 'update_region' region.id%}">Update</a>
+              <a href="{%url 'delete_region' region.id%}">Delete</a> 
+          </td>
+  
         </tr>
        
         {%endfor%}
@@ -35,6 +39,7 @@
       </tbody>
     </table>
   </div>
+
 {%endblock content%}
 
 
