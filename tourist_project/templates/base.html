@@ -16,7 +16,7 @@
   <!--Navigation Bar-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Ethiopian Tourists Information System</a>
+      <a class="navbar-brand" href="{% url 'home' %}">Ethiopian Tourists Information System</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -26,10 +26,10 @@
             <a class="nav-link active" aria-current="page" href="{% url "create_region" %}">Create Region</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Login</a>
+            <a class="nav-link active" aria-current="page" href="{%url 'login'%}">Login</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Logout</a>
+            <a class="nav-link active" aria-current="page" href="{%url 'logout'%}">Logout</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">SignUp</a>

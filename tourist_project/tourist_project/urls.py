@@ -21,6 +21,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('', include('tourist_Info.urls')),
+    path('accounts/', include('django.contrib.auth.urls')), #127.0.0.1/accounts
     path('admin/', admin.site.urls),
 ]
 
