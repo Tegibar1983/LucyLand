@@ -1,0 +1,28 @@
+{%extends 'base.html'%}
+
+{%block title%} delete region {%endblock title%}
+
+{%block content%}
+
+<form method="POST">
+{%csrf_token%}
+
+      <div class="card text-bg-secondary mb-3" style="max-width: 750px;">
+           <div class="row">
+              <div class="col-4">
+                <img class="card-img-top" src="{{region.map.url}}" width=300 height=400 alt="{{region.region_name}} region map">
+              </div>
+              <div class="col-8">
+                <div class="card-header">Warning Alert!</div>
+                <div class="card-body">
+                 <h5 class="card-title">Are you sure you want to delete {{region.region_name}}?</h5>
+                 <input type="submit" value="Delete" class="btn btn-danger">
+                 <a href="{%url 'home'%}" class='btn btn-success'> Cancel </a>
+                </div>
+              </div>
+            </div>
+       </div>
+
+</form>
+
+{%endblock content%}

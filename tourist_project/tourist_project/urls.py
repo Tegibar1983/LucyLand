@@ -23,9 +23,17 @@ urlpatterns = [
 ]
 =======
 from django.urls import path, include
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     path('', include('tourist_Info.urls')),
+    path('accounts/', include('django.contrib.auth.urls')), #127.0.0.1/accounts
     path('admin/', admin.site.urls),
 ]
+<<<<<<< HEAD
 >>>>>>> 8da5056bc9c0ef8474439e7ec4c9b6cc57e3e5b9
+=======
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+>>>>>>> e5d9e3f58d989aba070fa0c073bba628fe9d7fd4
