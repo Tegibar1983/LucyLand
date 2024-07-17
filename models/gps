@@ -1,1 +1,0 @@
-models.CharField(max_length=100)  # Assuming GPS coordinates will be stored as a string

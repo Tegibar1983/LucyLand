@@ -1,1 +1,0 @@
-models.CharField(max_length=200)  # Languages commonly spoken in the region.

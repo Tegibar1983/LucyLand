@@ -20,7 +20,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = 'django-insecure-9sg$*(fpn@3or%^t14_-9shsi+-@uzyq)a1o*ibq9vdr)^cngm'
+=======
+SECRET_KEY = 'django-insecure-7vk+f!5c-*j*c59qd69qoua*#-c(8a#5_3iw%q3!j@s!e7&j#%'
+>>>>>>> 8da5056bc9c0ef8474439e7ec4c9b6cc57e3e5b9
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'tourist_info',
+=======
+    'tourist_Info',
+>>>>>>> 8da5056bc9c0ef8474439e7ec4c9b6cc57e3e5b9
 ]
 
 MIDDLEWARE = [
@@ -55,7 +63,11 @@ ROOT_URLCONF = 'tourist_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+<<<<<<< HEAD
         'DIRS': [],
+=======
+        'DIRS': [BASE_DIR/'templates'],
+>>>>>>> 8da5056bc9c0ef8474439e7ec4c9b6cc57e3e5b9
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
