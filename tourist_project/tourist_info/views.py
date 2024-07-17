@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import TouristInfo
 from .forms import TouristInfoForm
 from django.contrib import messages
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -59,3 +60,21 @@ def delete_region(request, pk):
     else:
         context={'region':region}
         return render(request, 'delete_region.html', context=context)
+    
+
+
+def register_user(request):
+    if request.method=="POST":
+        form=UserCreationForm(request.POST)
+        context={'form':form}
+        if form.is_valid():
+            form.save()
+            return redirect('login')
+        else:
+            return render(request, 'register_user.html', context=context)
+    else:
+        form=UserCreationForm()
+        context={'form':form}
+        return render(request, 'register_user.html', context=context)
+    
+   
