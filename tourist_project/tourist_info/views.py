@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-from django.shortcuts import render
-
-# Create your views here.
-=======
 from django.shortcuts import render, redirect
 from .models import TouristInfo
 from .forms import TouristInfoForm
@@ -30,11 +25,6 @@ def create_region(request):
         form=TouristInfoForm()
         context={'form':form}
         return render(request, 'create_region.html', context=context)
-<<<<<<< HEAD
->>>>>>> 8da5056bc9c0ef8474439e7ec4c9b6cc57e3e5b9
-=======
-    
-
 
 def read_more(request, pk):
     region=TouristInfo.objects.get(id=pk)
@@ -84,6 +74,3 @@ def register_user(request):
         form=UserCreationForm()
         context={'form':form}
         return render(request, 'register_user.html', context=context)
-    
-   
->>>>>>> e5d9e3f58d989aba070fa0c073bba628fe9d7fd4
