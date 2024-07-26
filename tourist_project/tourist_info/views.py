@@ -3,6 +3,9 @@ from .models import TouristInfo
 from .forms import TouristInfoForm
 from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import logout
+from django.urls import reverse
+
 
 # Create your views here.
 
@@ -74,3 +77,9 @@ def register_user(request):
         form=UserCreationForm()
         context={'form':form}
         return render(request, 'register_user.html', context=context)
+
+
+
+def logout_user(request):
+    logout(request)
+    return redirect(reverse('login'))  # Redirect to the homepage or any other page after logout

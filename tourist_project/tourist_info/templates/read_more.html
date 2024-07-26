@@ -8,14 +8,22 @@
 <div class="card">
     <img class="card-img-top" src="{{region.map.url}}" width=300,  height=400, alt="{{region.name}} Regional Map">
     <div class="card-body">
-      <h5 class="card-title">Overview of {{region.region_name}} Tourism</h5>
+      <h2 class="card-title" style="font-weight: bold">Important Tourist Informations in {{region.region_name}} Tourism</h2>
     <div class="row">
         <div class="col-12">
                   
             <p class="card-text">
+                <div style="background-color: salmon;">
+                <ul>
+                    <li>Region Capital City: {{region.capital_city}}</li>
+                    <li>Tourist Suport Number : {{region.telephone}}</li>
+                    <li>Tourguide Email: {{region.email}}</li>
+                    <li>Tourist Insight Web: {{region.website}}</li>
+                    
+                  
+                </ul>
+            </div>
 
-            The Tigray Region is a region in Ethiopia. The capital city is Mekelle. Tigray is the homeland of the Tigrayan, Irob and Kunama peoples. The main language is Tigrinya.[3]
-            Tigray has 1 international airport and 4 commercial airports. The international airport is Alula Aba Nega Airport. The 4 commercial airports are Shire Airport, Humera Airport, Dansha Airport, and Axum Atse Yohannes 4th Airport.
         
             </p>
                 <a href="{% url "home" %}" class="btn btn-primary">Go back Home</a>

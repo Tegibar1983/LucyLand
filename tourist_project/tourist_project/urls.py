@@ -21,12 +21,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 
 urlpatterns = [
-    path('', include('tourist_info.urls')),  # Ensure this matches your app name
     path('accounts/', include('django.contrib.auth.urls')),  # 127.0.0.1/accounts
+    path('', include('tourist_info.urls')),  # Ensure this matches your app name
     path('admin/', admin.site.urls),
-]
+   ]
 
-urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-
-# Optionally, add static files handling in development
-urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+# Media files handling
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
